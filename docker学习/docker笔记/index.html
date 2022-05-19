@@ -585,26 +585,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transaction-summary" class="md-nav__link">
-    Transaction Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transaction-summary_1" class="md-nav__link">
-    Transaction Summary
-  </a>
-  
-    <nav class="md-nav" aria-label="Transaction Summary">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#66" class="md-nav__link">
     6.6. 列出镜像历史
@@ -619,15 +599,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#7-reference" class="md-nav__link">
     7. reference
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1000,26 +980,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transaction-summary" class="md-nav__link">
-    Transaction Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transaction-summary_1" class="md-nav__link">
-    Transaction Summary
-  </a>
-  
-    <nav class="md-nav" aria-label="Transaction Summary">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#66" class="md-nav__link">
     6.6. 列出镜像历史
@@ -1034,15 +994,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#7-reference" class="md-nav__link">
     7. reference
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1059,6 +1019,8 @@
               
                 
 
+
+  <h1>docker_notes</h1>
 
 <blockquote>
 <p>作者: sugar</p>
@@ -1777,27 +1739,35 @@ ENV        # 构建的时候设置环境变量
 <p>创建自己的centos</p>
 </blockquote>
 <ol>
-<li>
-<p>编写配置文件
-    ```bash
-    FROM centos
-    MAINTAINER sugar<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#49;&#49;&#52;&#52;&#51;&#57;&#50;&#49;&#55;&#57;&#64;&#113;&#113;&#46;&#99;&#111;&#109;">&#49;&#49;&#52;&#52;&#51;&#57;&#50;&#49;&#55;&#57;&#64;&#113;&#113;&#46;&#99;&#111;&#109;</a></p>
-<p>ENV MYPATH /usr/local   <br />
-WORKDIR $MYPATH            # 设置工作目录, 即为进入容器内的目录. 官方的centos启动之后, 进入容器内部为根目录, 通过此设置, 可以将进入容器的默认目录进行修改</p>
-<p>RUN yum -y install vim
-RUN yum -y install net-tools</p>
-<p>EXPOSE 80</p>
-<p>CMD echo $MYPATH
-CMD echo "---end---"
-CMD /bin/bash</p>
-<p><code>2. 通过文件构建镜像</code>bash
-docker build -f dockfile -t mycentos:0.1 .
-<code>通过上面的命令, 使用 dockerfile构建构建新的镜像</code>bash
-[root@sugarlearn docker-test-volume]# docker build -f dockerfile -t mycentos:0.1 .
+<li>编写配置文件</li>
+</ol>
+<pre><code class="language-bash">FROM centos
+MAINTAINER sugar&lt;1144392179@qq.com&gt;
+
+ENV MYPATH /usr/local     
+WORKDIR $MYPATH            # 设置工作目录, 即为进入容器内的目录. 官方的centos启动之后, 进入容器内部为根目录, 通过此设置, 可以将进入容器的默认目录进行修改
+
+RUN yum -y install vim
+RUN yum -y install net-tools
+
+EXPOSE 80
+
+CMD echo $MYPATH
+CMD echo &quot;---end---&quot;
+CMD /bin/bash
+
+</code></pre>
+<ol>
+<li>通过文件构建镜像</li>
+</ol>
+<pre><code class="language-bash">docker build -f dockfile -t mycentos:0.1 .
+</code></pre>
+<p>通过上面的命令, 使用 dockerfile构建构建新的镜像</p>
+<pre><code class="language-bash">[root@sugarlearn docker-test-volume]# docker build -f dockerfile -t mycentos:0.1 .
 Sending build context to Docker daemon 2.048 kB
 Step 1/10 : FROM centos
  ---&gt; 5d0da3dc9764
-Step 2/10 : MAINTAINER sugar<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#49;&#49;&#52;&#52;&#51;&#57;&#50;&#49;&#55;&#57;&#64;&#113;&#113;&#46;&#99;&#111;&#109;">&#49;&#49;&#52;&#52;&#51;&#57;&#50;&#49;&#55;&#57;&#64;&#113;&#113;&#46;&#99;&#111;&#109;</a>
+Step 2/10 : MAINTAINER sugar&lt;1144392179@qq.com&gt;
  ---&gt; Running in b6fcc94bb8a5
  ---&gt; 74c30c1cbe48
 Removing intermediate container b6fcc94bb8a5
@@ -1809,8 +1779,9 @@ Step 4/10 : WORKDIR $MYPATH
  ---&gt; dfb3f984beb8
 Removing intermediate container dd41b1c38380
 Step 5/10 : RUN yum -y install vim
- ---&gt; Running in b6c7b75645b7</p>
-<p>CentOS Linux 8 - AppStream                      4.6 MB/s | 8.4 MB     00:01
+ ---&gt; Running in b6c7b75645b7
+
+CentOS Linux 8 - AppStream                      4.6 MB/s | 8.4 MB     00:01
 CentOS Linux 8 - BaseOS                         4.0 MB/s | 4.6 MB     00:01
 CentOS Linux 8 - Extras                          17 kB/s |  10 kB     00:00
 Dependencies resolved.
@@ -1823,23 +1794,26 @@ Installing dependencies:
  gpm-libs            x86_64      1.20.7-17.el8             appstream       39 k
  vim-common          x86_64      2:8.0.1763-16.el8         appstream      6.3 M
  vim-filesystem      noarch      2:8.0.1763-16.el8         appstream       49 k
- which               x86_64      2.21-16.el8               baseos          49 k</p>
-<h1 id="transaction-summary">Transaction Summary</h1>
-<p>Install  5 Packages</p>
-<p>Total download size: 7.8 M
+ which               x86_64      2.21-16.el8               baseos          49 k
+
+Transaction Summary
+================================================================================
+Install  5 Packages
+
+Total download size: 7.8 M
 Installed size: 30 M
 Downloading Packages:
 (1/5): gpm-libs-1.20.7-17.el8.x86_64.rpm        221 kB/s |  39 kB     00:00
 (2/5): vim-enhanced-8.0.1763-16.el8.x86_64.rpm  4.5 MB/s | 1.4 MB     00:00
 (3/5): vim-filesystem-8.0.1763-16.el8.noarch.rp 172 kB/s |  49 kB     00:00
 (4/5): which-2.21-16.el8.x86_64.rpm             309 kB/s |  49 kB     00:00
-(5/5): vim-common-8.0.1763-16.el8.x86_64.rpm     12 MB/s | 6.3 MB     00:00</p>
-<hr />
-<p>Total                                           5.7 MB/s | 7.8 MB     00:01
+(5/5): vim-common-8.0.1763-16.el8.x86_64.rpm     12 MB/s | 6.3 MB     00:00
+--------------------------------------------------------------------------------
+Total                                           5.7 MB/s | 7.8 MB     00:01
 warning: /var/cache/dnf/appstream-02e86d1c976ab532/packages/gpm-libs-1.20.7-17.el8.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 8483c65d: NOKEY
 CentOS Linux 8 - AppStream                      1.6 MB/s | 1.6 kB     00:00
 Importing GPG key 0x8483C65D:
- Userid     : "CentOS (CentOS Official Signing Key) <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#99;&#101;&#110;&#116;&#111;&#115;&#46;&#111;&#114;&#103;">&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#99;&#101;&#110;&#116;&#111;&#115;&#46;&#111;&#114;&#103;</a>"
+ Userid     : &quot;CentOS (CentOS Official Signing Key) &lt;security@centos.org&gt;&quot;
  Fingerprint: 99DB 70FA E1D7 CE22 7FB6 4882 05B5 55B3 8483 C65D
  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 Key imported successfully
@@ -1861,31 +1835,37 @@ Running transaction
   Verifying        : vim-common-2:8.0.1763-16.el8.x86_64                    2/5
   Verifying        : vim-enhanced-2:8.0.1763-16.el8.x86_64                  3/5
   Verifying        : vim-filesystem-2:8.0.1763-16.el8.noarch                4/5
-  Verifying        : which-2.21-16.el8.x86_64                               5/5</p>
-<p>Installed:
+  Verifying        : which-2.21-16.el8.x86_64                               5/5
+
+Installed:
   gpm-libs-1.20.7-17.el8.x86_64         vim-common-2:8.0.1763-16.el8.x86_64
   vim-enhanced-2:8.0.1763-16.el8.x86_64 vim-filesystem-2:8.0.1763-16.el8.noarch
-  which-2.21-16.el8.x86_64</p>
-<p>Complete!
+  which-2.21-16.el8.x86_64
+
+Complete!
  ---&gt; 4c7b4ce9b341
 Removing intermediate container b6c7b75645b7
 Step 6/10 : RUN yum -y install net-tools
- ---&gt; Running in 44cf17d41b1d</p>
-<p>Last metadata expiration check: 0:00:10 ago on Mon Jan 24 09:43:16 2022.
+ ---&gt; Running in 44cf17d41b1d
+
+Last metadata expiration check: 0:00:10 ago on Mon Jan 24 09:43:16 2022.
 Dependencies resolved.
 ================================================================================
  Package         Architecture Version                        Repository    Size
 ================================================================================
 Installing:
- net-tools       x86_64       2.0-0.52.20160912git.el8       baseos       322 k</p>
-<h1 id="transaction-summary_1">Transaction Summary</h1>
-<p>Install  1 Package</p>
-<p>Total download size: 322 k
+ net-tools       x86_64       2.0-0.52.20160912git.el8       baseos       322 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 322 k
 Installed size: 942 k
 Downloading Packages:
-net-tools-2.0-0.52.20160912git.el8.x86_64.rpm   1.2 MB/s | 322 kB     00:00</p>
-<hr />
-<p>Total                                           337 kB/s | 322 kB     00:00
+net-tools-2.0-0.52.20160912git.el8.x86_64.rpm   1.2 MB/s | 322 kB     00:00
+--------------------------------------------------------------------------------
+Total                                           337 kB/s | 322 kB     00:00
 Running transaction check
 Transaction check succeeded.
 Running transaction test
@@ -1894,10 +1874,12 @@ Running transaction
   Preparing        :                                                        1/1
   Installing       : net-tools-2.0-0.52.20160912git.el8.x86_64              1/1
   Running scriptlet: net-tools-2.0-0.52.20160912git.el8.x86_64              1/1
-  Verifying        : net-tools-2.0-0.52.20160912git.el8.x86_64              1/1</p>
-<p>Installed:
-  net-tools-2.0-0.52.20160912git.el8.x86_64</p>
-<p>Complete!
+  Verifying        : net-tools-2.0-0.52.20160912git.el8.x86_64              1/1
+
+Installed:
+  net-tools-2.0-0.52.20160912git.el8.x86_64
+
+Complete!
  ---&gt; e2a85f441e55
 Removing intermediate container 44cf17d41b1d
 Step 7/10 : EXPOSE 80
@@ -1908,7 +1890,7 @@ Step 8/10 : CMD echo $MYPATH
  ---&gt; Running in 4d092e681f27
  ---&gt; d7877648b301
 Removing intermediate container 4d092e681f27
-Step 9/10 : CMD echo "---end---"
+Step 9/10 : CMD echo &quot;---end---&quot;
  ---&gt; Running in 551d9ae06abe
  ---&gt; c465707419b5
 Removing intermediate container 551d9ae06abe
@@ -1917,17 +1899,16 @@ Step 10/10 : CMD /bin/bash
  ---&gt; 6996698dfbc1
 Removing intermediate container 3ad32c2be5fd
 Successfully built 6996698dfbc1
-<code>3. 构建镜像之后, 可以进入容器查看命令是否安装</code>bash
-[root@sugarlearn docker-test-volume]# docker images
+</code></pre>
+<p>. 构建镜像之后, 可以进入容器查看命令是否安装</p>
+<pre><code class="language-bash">[root@sugarlearn docker-test-volume]# docker images
 REPOSITORY                    TAG                 IMAGE ID            CREATED              SIZE
 mycentos                      0.1                 6996698dfbc1        About a minute ago   326 MB
 [root@sugarlearn docker-test-volume]# docker run -it mycentos:0.1
 [root@b22fae9e9ab5 local]# pwd
 /usr/local
 [root@b22fae9e9ab5 local]# vim     # 可以发现vim已经安装了
-```</p>
-</li>
-</ol>
+</code></pre>
 <h3 id="66">6.6. 列出镜像历史</h3>
 <pre><code class="language-bash">[root@sugarlearn docker-test-volume]# docker images
 REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
