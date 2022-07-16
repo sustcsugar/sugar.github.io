@@ -1,15 +1,15 @@
 site_name: Sugar的个人博客
 nav:
     - IC设计:
-        - 'JPEG_decoder': 'digital-circuit/jpeg_decoder.md'
-    - bus:
-        - 'I2C': 'learn_bus/I2C.md'
+        - "JPEG_decoder": "IC-degisn/jpeg_decoder.md"
+        - bus:
+            - "I2C": "bus/I2C.md"
     - docker学习:
-        - 'docker_notes': 'docker学习/docker笔记.md'
-        - 'docker实战:思源笔记': 'docker学习/docker搭建思源笔记.md'
-        - 'docker实战:docsify': 'docker学习/docsify搭建记录.md'
-    - CS:
-        - '阅读': 'web_tech/yuedu_web.md'
+        - "docker_notes": "docker学习/docker笔记.md"
+        - "docker实战:思源笔记": "docker学习/docker搭建思源笔记.md"
+        - "docker实战:docsify": "docker学习/docsify搭建记录.md"
+        - "docker实战:阅读web端": "docker学习/yuedu_web.md"
+
 
 theme: 
   name: material
