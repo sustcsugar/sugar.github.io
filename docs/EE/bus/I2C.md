@@ -1,5 +1,5 @@
 > 作者: sugar
-> 转载请联系作者(1144392179@qq.com),并说明出处!
+> 转载请联系作者(shigang-97@qq.com ),并说明出处!
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [blog.csdn.net](https://blog.csdn.net/u010632165/article/details/109188507?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164966919916781685395687%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=164966919916781685395687&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-109188507.142^v7^control,157^v4^control&utm_term=I2C&spm=1018.2226.3001.4187)
 

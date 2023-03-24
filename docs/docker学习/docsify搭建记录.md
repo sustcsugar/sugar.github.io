@@ -1,6 +1,6 @@
 > 作者: sugar
 > 
-> 转载请联系作者(1144392179@qq.com),并说明出处!
+> 转载请联系作者(shigang-97@qq.com ),并说明出处!
 
 
 ## 1. Introduction
@@ -177,7 +177,7 @@ loadNavbar设置为true, 在项目文件夹中添加`_navbar.md`文件, 即为�
 2. 创建`Dockfile`
 	```
 	FROM node:latest
-	MAINTAINER sugar<1144392179@qq.com>
+	MAINTAINER sugar<shigang-97@qq.com >
 	WORKDIR /docs
 	RUN npm install -g docsify-cli@latest
 	EXPOSE 3344/tcp   # 此处暴露的是主机端口

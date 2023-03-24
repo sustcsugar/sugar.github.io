@@ -1,6 +1,6 @@
 > 作者: sugar
 > 
-> 转载请联系作者(1144392179@qq.com),并说明出处!
+> 转载请联系作者(shigang-97@qq.com ),并说明出处!
 
 
 ## 1. docker
@@ -797,7 +797,7 @@ FROM scratch    # dockerhub中绝大多数的镜像, 都是从此基础镜像而
 1. 编写配置文件
 ```bash
 FROM centos
-MAINTAINER sugar<1144392179@qq.com>
+MAINTAINER sugar<shigang-97@qq.com >
 
 ENV MYPATH /usr/local     
 WORKDIR $MYPATH            # 设置工作目录, 即为进入容器内的目录. 官方的centos启动之后, 进入容器内部为根目录, 通过此设置, 可以将进入容器的默认目录进行修改
@@ -823,7 +823,7 @@ docker build -f dockfile -t mycentos:0.1 .
 Sending build context to Docker daemon 2.048 kB
 Step 1/10 : FROM centos
  ---> 5d0da3dc9764
-Step 2/10 : MAINTAINER sugar<1144392179@qq.com>
+Step 2/10 : MAINTAINER sugar<shigang-97@qq.com >
  ---> Running in b6fcc94bb8a5
  ---> 74c30c1cbe48
 Removing intermediate container b6fcc94bb8a5
