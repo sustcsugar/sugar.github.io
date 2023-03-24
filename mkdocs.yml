@@ -1,14 +1,17 @@
 site_name: Sugar的个人博客
 nav:
-    - IC设计:
-        - "JPEG_decoder": "IC-design/jpeg_decoder.md"
-        - bus:
-            - "I2C": "bus/I2C.md"
-    - docker学习:
-        - docker学习笔记: "docker学习/docker笔记.md"
-        - docker实战:思源笔记: "docker学习/docker搭建思源笔记.md"
-        - docker实战:docsify: "docker学习/docsify搭建记录.md"
-        - docker实战:阅读web端: "docker学习/yuedu_web.md"
+    - EE:
+        - BUS:
+            - "I2C": "EE/bus/I2C.md"
+        - 数字设计:
+            - "JPEG_decoder": "EE/IC-design/jpeg_decoder.md"
+    - CS:
+        - "mkcocs使用手册": "CS/mkdocs使用手册.md"
+    - Docker学习:
+        - Docker学习笔记: "docker学习/docker笔记.md"
+        - Docker实战:思源笔记: "docker学习/docker搭建思源笔记.md"
+        - Docker实战:docsify: "docker学习/docsify搭建记录.md"
+        - Docker实战:阅读web端: "docker学习/yuedu_web.md"
 
 repo_name: Github
 repo_url: https://github.com/sustcsugar
