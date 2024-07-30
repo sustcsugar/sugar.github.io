@@ -34,9 +34,12 @@ cd my-project
 
 
 ## 4. 配置
-配置文件为 `yml` 格式的,语法需要注意.
+配置文件为 `yml` 格式的,语法需要注意:
+
 - nav 中的文件名,需要**双引号**, 标签名不需要引号.
+
 - markdown_extentions 中的冒号,需要空格
+
 ```yml
 site_name: Sugar's Docs
 nav:
@@ -48,6 +51,15 @@ markdown_extentions:
     permalink: True
   - footnotes
 
+```
+
+## 5. 主题配置
+
+在`mkdocs.yml`中添加主题配置，可以修改主题。 `material`为[第三方主题](https://squidfunk.github.io/mkdocs-material/)，需要额外安装。
+
+```yml
+theme: 
+  name: material
 ```
 
 ## 5. Reference

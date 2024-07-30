@@ -1,28 +1,61 @@
 site_name: Sugar的个人博客
-nav:
-    - EE:
-        - BUS:
-            - "I2C": "EE/bus/I2C.md"
-        - 数字设计:
-            - "JPEG_decoder": "EE/IC-design/jpeg_decoder.md"
-    - CS:
-        - "mkcocs使用手册": "CS/mkdocs使用手册.md"
-    - Docker学习:
-        - Docker学习笔记: "docker学习/docker笔记.md"
-        - Docker实战:思源笔记: "docker学习/docker搭建思源笔记.md"
-        - Docker实战:docsify: "docker学习/docsify搭建记录.md"
-        - Docker实战:阅读web端: "docker学习/yuedu_web.md"
+
+# nav:
+    # - EE:
+        # - BUS:
+            # - "I2C": "EE/bus/I2C.md"
+        # - 数字设计:
+            # - "JPEG_decoder": "EE/IC-design/jpeg_decoder.md"
+    # - CS:
+        # - "mkcocs使用手册": "CS/mkdocs使用手册.md"
+    # - Docker学习:
+        # - Docker学习笔记: "docker学习/docker笔记.md"
+        # - Docker实战:思源笔记: "docker学习/docker搭建思源笔记.md"
+        # - Docker实战:docsify: "docker学习/docsify搭建记录.md"
+        # - Docker实战:阅读web端: "docker学习/yuedu_web.md"
 
 repo_name: Github
 repo_url: https://github.com/sustcsugar
 
 markdown_extensions:
-    - admonition
-    - smarty
-    - toc:
-        permalink: True
-        separator: "_"
-    - sane_lists
+
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 theme: 
   name: material
+  features:
+    - navigation.path
