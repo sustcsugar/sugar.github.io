@@ -1,8 +1,9 @@
 ---
-title: Hexo静态博客学习(一)
+title: Hexo静态博客学习-基础使用
 tags: hexo
-layout: 
+abbrlink: 40367
 date: 2024-08-07 18:02:33
+categories: 技术文章
 ---
 
 

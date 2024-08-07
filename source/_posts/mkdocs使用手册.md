@@ -1,7 +1,9 @@
 ---
 title: mkdocs使用手册
-date: 2024-08-07 14:04:29
 tags: CS
+abbrlink: 7290
+date: 2024-08-07 14:04:29
+categories: 技术文章
 ---
 
 
