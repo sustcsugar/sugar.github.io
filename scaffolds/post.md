@@ -1,6 +1,6 @@
 ---
 title: {{ title }}
 date: {{ date }}
-type: ""
-layout: ""
+tags: 
+layout: 
 ---

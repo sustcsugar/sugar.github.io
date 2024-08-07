@@ -2,6 +2,7 @@
 title: test
 date: 2024-08-07 14:04:29
 tags: new
+categories: hexo
 ---
 
 ## title2
