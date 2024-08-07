@@ -6,14 +6,15 @@
 title: SugarBlog
 subtitle: '一片冰心在玉壶'
 description: 'Notes,Articals etc.'
-keywords:
+keywords: 
 author: Sugar
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://sustcsugar.github.io/sugar.github.io/
+url: https://sustcsugar.github.io/
+root:
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -103,6 +104,6 @@ theme: hexo-theme-matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:sustcsugar/sugar.github.io.git
+  repo: git@github.com:sustcsugar/sustcsugar.github.io.git
   branch: gh-pages
   ignore_hidden: false
