@@ -574,8 +574,8 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub1: 从来没有真正的绝境, 只有心灵的迷途
-  sub2: Never really desperate, only the lost of the soul
+  sub1: 「世上只有一種英雄主義，就是在認清生活真相以後，依然熱愛生活。」 — 羅曼．羅蘭
+  sub2: 「There is only one true heroism in the world - to see the world as it is, and to love it.」 - Romain Rolland 
 
 # 手机二级菜单.
 navMenu:
@@ -589,7 +589,7 @@ instantpage:
 # banner 是否每日切换.
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
 banner:
-  enable: true
+  enable: false
 
 #ICP备案信息尾部显示
 icp:
