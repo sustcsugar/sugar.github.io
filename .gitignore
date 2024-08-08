@@ -1,7 +1,5 @@
 db.json
 public/
 node_modules/
-.deplay_git/
-.deploy_git
 **/.DS_Store
 .obsidian/
