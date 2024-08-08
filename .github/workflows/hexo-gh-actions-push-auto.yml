@@ -1,5 +1,5 @@
 # 定义一个名为 Pages 的动作
-name: Pages
+name: hexo-gh-actions-push-auto
  
 # 当有一个新的推送（push）到名为 main 的分支时，执行部署任务
 on:
