@@ -114,12 +114,63 @@ code:
 
 ## 更换字体
 
+> 更换字体一个很麻烦的问题是,使用本地字体时,打开网页需要加载字体. 如果字体文件较大,会十分影响网页的加载速度.
+> 
+> 因此可以进行取舍, 使用大多数设备都支持的本地预装字体. 或者使用web字体.
+
+
+### 全局更换字体
+
+在`hexo`根目录下创建并添加字体文件`/source/font/myfont.ttf`.
+
+然后进入主题文件夹`/themes/hexo-theme-matery/source/css/my.css`, 在其中添加下面的`css`片段用来控制全局字体.
+
+```css
+
+@font-face{
+    font-family: 'myFont';
+    src: url('../font/myFont.ttf');
+}
+
+body{
+    font-family: 'myFont';
+}
+
+```
+
+### 局部更换字体
+
+和全局字体类似, 通过网页审查工具,找到想要修改字体的网页元素,然后修改`my.css`文件来修改字体.
+
+```css
+@font-face{
+    font-family: 'navFont';
+    src: url('../font/jianqiti.ttf');
+}
+
+
+nav {
+    font-family: 'navFont';
+}
+```
+
+### web安全字体
+
+> 使用广泛支持的“Web安全”字体可以显著减少网页加载时间，因为这些字体通常已经安装在大多数用户的系统上，不需要额外下载。
+
+```css
+body {
+    font-family: "Songti SC", SimSun,"宋体","仿宋", "微软雅黑","黑体", Arial, Helvetica, sans-serif;
+}
+```
+
+
 ## 样板
 1. https://small-rose.github.io/
 2. https://marmalade.vip/
 3. https://zahui.fan/
 
-## ref
+## reference
 1. [Matery主题新手常见问题](https://small-rose.github.io/posts/a53a9069.html)
 2. [Matery之代码块优化](https://cloud.tencent.com/developer/article/2148822)
 3. [matery主题的代码块问题解决](https://www.rewind.show/2020/12/23/BUG%E5%A4%84%E7%90%86/matery%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/)
