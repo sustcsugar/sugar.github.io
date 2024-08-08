@@ -1,8 +1,9 @@
 ---
-title: Hexo静态博客学习-matery主题优化
+title: Hexo静态博客学习-matery主题美化
 abbrlink: dfacf917
 date: 2024-08-08 00:36:17
-tags: hexo
+tags:
+  - hexo
 categories: 技术文章
 ---
 
@@ -19,6 +20,33 @@ categories: 技术文章
 }
 ```
 
+## 导航栏颜色
+
+修改`matery.css`文件`.bg-color`选择器
+
+```css
+.bg-color {
+    background-image: linear-gradient(to right, #e657ce 0%, #1059e0 100%);
+}
+```
+
+
+## 卡片区背景
+
+修改`matery.css`文件`body`选择器
+
+```css
+body { 
+    background-color: #eaeaea; 
+    background: linear-gradient(60deg, rgba(224,255,125, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover;
+    background-attachment: fixed; 
+    margin: 0; 
+    color: #34495e; 
+}
+```
+
+
+
 ## 代码块修改
 
 > `hexo + matery` 自带的代码块渲染后出问题
@@ -26,6 +54,7 @@ categories: 技术文章
 > 2. 格式渲染也有问题。
 ![](https://raw.githubusercontent.com/sustcsugar/picgo/main/img/202408081052616.png)
 
+### 代码高亮
 
 按照下面步骤修改根目录的 `config` 文件
 
@@ -73,8 +102,15 @@ code:
   break: true  # 代码是否折行
 ```
 
+### 代码行号
+
 设置完之后发现代码块不显示行号,参考[这篇文章](https://blog.csdn.net/weixin_45453133/article/details/120853394)发现是`matery`对`prism.css`的适配出问题了,需要修改主题中的`prism.css`文件.
 
+按照这个方法修改`prism.css`文件之后, 显示行号了,但是选择代码时后出现错位问题. 这个问题现在还没有解决.
+![](https://raw.githubusercontent.com/sustcsugar/picgo/main/img/202408081608464.png)
+
+
+### 代码折行
 
 ## 更换字体
 
@@ -88,3 +124,4 @@ code:
 2. [Matery之代码块优化](https://cloud.tencent.com/developer/article/2148822)
 3. [matery主题的代码块问题解决](https://www.rewind.show/2020/12/23/BUG%E5%A4%84%E7%90%86/matery%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/)
 4. [Hexo官方教程-语法高亮](https://hexo.io/zh-cn/docs/syntax-highlight#PrismJS)
+5. [Marmalade's Blog Hexo-Matery主题细致美化(下)](https://marmalade.vip/Materysettings2.html#toc-heading-8)
