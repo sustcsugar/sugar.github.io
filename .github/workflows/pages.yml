@@ -1,0 +1,65 @@
+# 定义一个名为 Pages 的动作
+name: Pages
+ 
+# 当有一个新的推送（push）到名为 main 的分支时，执行部署任务
+on:
+  push:
+    branches:
+      - main
+ 
+# 定义一个名为 build-and-deploy 的 job
+jobs:
+  build-and-deploy:
+    # 在 Ubuntu 最新版本上运行此 job
+    runs-on: ubuntu-latest
+    steps:
+      # 检出 hexooo 分支的代码
+      - name: Checkout code from hexo resources branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+ 
+      # 设置 Git 用户信息
+      - name: Set up Git user information
+        run: |
+          git config --global user.name "hexo-gh-actions"
+          git config --global user.email "hexo-gh-actions@gmail.com"
+ 
+      # 设置 Node.js 版本
+      - name: Set up Node.js 22.5.1
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22.5.1'
+  
+      # 全局安装 Hexo
+      - name: Install Hexo globally
+        run: |
+          npm install -g hexo-cli
+          npm install
+ 
+      # 缓存 NPM 依赖
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+ 
+      # 使用环境变量 ACTION_DEPLOY_KEY 部署到主分支
+      - name: Deploy to main branch
+        env:
+          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+      # 部署
+      - name: Deploy
+        run: |
+          hexo clean
+          hexo generate
+          hexo deploy
