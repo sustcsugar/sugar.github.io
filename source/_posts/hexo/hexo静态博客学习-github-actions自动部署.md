@@ -6,7 +6,7 @@ title: hexo静态博客学习-github-actions自动部署
 date created: 20240808_223136
 date modified: 20240809_002554
 date: 2024-08-09 00:27:06
-categories: 技术文章
+categories: 文字工作
 abbrlink:
 status:
 ---

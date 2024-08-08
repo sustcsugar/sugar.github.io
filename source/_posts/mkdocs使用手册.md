@@ -2,7 +2,7 @@
 title: mkdocs使用手册
 tags:
   - CS
-categories: 技术文章
+categories: 文字工作
 abbrlink: f8b59f68
 date: 2024-08-07 14:04:29
 ---

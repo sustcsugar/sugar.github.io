@@ -4,7 +4,7 @@ abbrlink: dfacf917
 date: 2024-08-08 00:36:17
 tags:
   - hexo
-categories: 技术文章
+categories: 文字工作
 ---
 
 ## 1. 首页颜色变化
