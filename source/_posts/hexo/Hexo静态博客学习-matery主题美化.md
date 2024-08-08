@@ -7,7 +7,7 @@ tags:
 categories: 技术文章
 ---
 
-## 首页颜色变化
+## 1. 首页颜色变化
 
 修改文件 : `/source/css/matery.css`, 搜索 `rainbow` 来关闭颜色变换：
 ```css
@@ -20,7 +20,7 @@ categories: 技术文章
 }
 ```
 
-## 导航栏颜色
+## 2. 导航栏颜色
 
 修改`matery.css`文件`.bg-color`选择器
 
@@ -31,7 +31,7 @@ categories: 技术文章
 ```
 
 
-## 卡片区背景
+## 3. 卡片区背景
 
 修改`matery.css`文件`body`选择器
 
@@ -47,14 +47,14 @@ body {
 
 
 
-## 代码块修改
+## 4. 代码块修改
 
 > `hexo + matery` 自带的代码块渲染后出问题
 > 1.  高亮效果太差了，不好看。
 > 2. 格式渲染也有问题。
 ![](https://raw.githubusercontent.com/sustcsugar/picgo/main/img/202408081052616.png)
 
-### 代码高亮
+### 4.1. 代码高亮
 
 按照下面步骤修改根目录的 `config` 文件
 
@@ -102,7 +102,7 @@ code:
   break: true  # 代码是否折行
 ```
 
-### 代码行号
+### 4.2. 代码行号
 
 设置完之后发现代码块不显示行号,参考[这篇文章](https://blog.csdn.net/weixin_45453133/article/details/120853394)发现是`matery`对`prism.css`的适配出问题了,需要修改主题中的`prism.css`文件.
 
@@ -110,16 +110,16 @@ code:
 ![](https://raw.githubusercontent.com/sustcsugar/picgo/main/img/202408081608464.png)
 
 
-### 代码折行
+### 4.3. 代码折行
 
-## 更换字体
+## 5. 更换字体
 
 > 更换字体一个很麻烦的问题是,使用本地字体时,打开网页需要加载字体. 如果字体文件较大,会十分影响网页的加载速度.
 > 
 > 因此可以进行取舍, 使用大多数设备都支持的本地预装字体. 或者使用web字体.
 
 
-### 全局更换字体
+### 5.1. 全局更换字体
 
 在`hexo`根目录下创建并添加字体文件`/source/font/myfont.ttf`.
 
@@ -138,7 +138,7 @@ body{
 
 ```
 
-### 局部更换字体
+### 5.2. 局部更换字体
 
 和全局字体类似, 通过网页审查工具,找到想要修改字体的网页元素,然后修改`my.css`文件来修改字体.
 
@@ -154,7 +154,7 @@ nav {
 }
 ```
 
-### web安全字体
+### 5.3. web安全字体
 
 > 使用广泛支持的“Web安全”字体可以显著减少网页加载时间，因为这些字体通常已经安装在大多数用户的系统上，不需要额外下载。
 
@@ -165,12 +165,21 @@ body {
 ```
 
 
-## 样板
+### 5.4. 精简字体
+
+如果某些字符,在网站中只使用了几次, 例如标题, 导航栏等等.
+
+那么我们可以将完整的字体文件中,相对应的字符提取出来, 打包成一个新的`ttf`文件. 这样可以在美化网站的同时, 降低资源用量.  
+
+https://cyh.me/posts/font-minification/
+
+
+## 6. 样板
 1. https://small-rose.github.io/
 2. https://marmalade.vip/
 3. https://zahui.fan/
 
-## reference
+## 7. reference
 1. [Matery主题新手常见问题](https://small-rose.github.io/posts/a53a9069.html)
 2. [Matery之代码块优化](https://cloud.tencent.com/developer/article/2148822)
 3. [matery主题的代码块问题解决](https://www.rewind.show/2020/12/23/BUG%E5%A4%84%E7%90%86/matery%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/)
