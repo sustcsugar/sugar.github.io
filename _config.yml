@@ -49,17 +49,27 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+
 syntax_highlighter: highlight.js
 highlight:
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
+  enable: false
   preprocess: true
-  line_number: true
+  line_number: false
   tab_replace: ''
+# 安装插件 npm i -S hexo-prism-plugin
+prism_plugin:
+  enable: true
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: true    # default false
+  custom_css: 
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -104,6 +114,11 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-matery
 # theme: landscape
+
+# 文章搜索
+search:
+  path: search.xml
+  field: post
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

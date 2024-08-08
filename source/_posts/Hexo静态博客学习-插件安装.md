@@ -10,9 +10,11 @@ categories: 技术文章
 ## 常用插件
 
 ```bash
-npm install hexo-abbrlink --save            # 永久链接,修改文章url格式
+npm install hexo-abbrlink --save          # 永久链接,修改文章url格式
 npm install hexo-reading-time --save      # 显示阅读时长
 npm i --save hexo-wordcount               # 文章字数+阅读时长统计
+npm install hexo-generator-search --save
+
 ```
 
 ## 永久链接配置
@@ -41,4 +43,13 @@ postInfo:
   totalCount: false # 站点总文章字数
   min2read: true # 文章阅读时长
   readCount: false # 文章阅读次数
+```
+
+## 文章搜索功能
+修改很目录的 `_config.yml`
+
+```yml
+search:
+  path: search.xml
+  field: post
 ```
