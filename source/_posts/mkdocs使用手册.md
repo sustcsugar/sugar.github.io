@@ -1,9 +1,10 @@
 ---
 title: mkdocs使用手册
-tags: CS
-abbrlink: 7290
-date: 2024-08-07 14:04:29
+tags:
+  - CS
 categories: 技术文章
+abbrlink: f8b59f68
+date: 2024-08-07 14:04:29
 ---
 
 
@@ -24,8 +25,8 @@ cd my-project
 
 有一个配置文件 `mkdocs.yml`, 和一个包含文档源码的 `docs` 文件夹. 在 `docs` 文件夹里包含了一个名为 `index.md` 的文档.
 
-```
-~/source/repos/work/my-proj $ tree -C
+```bash
+$ tree -C
 .
 |-- docs
 |   `-- index.md
@@ -39,9 +40,9 @@ cd my-project
 ## 4. 配置
 配置文件为 `yml` 格式的,语法需要注意:
 
-- nav 中的文件名,需要**双引号**, 标签名不需要引号.
+- `nav` 中的文件名,需要**双引号**, 标签名不需要引号.
 
-- markdown_extentions 中的冒号,需要空格
+- `markdown_extentions` 中的冒号,需要空格
 
 ```yml
 site_name: Sugar's Docs

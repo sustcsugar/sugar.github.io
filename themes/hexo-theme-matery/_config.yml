@@ -640,3 +640,14 @@ bbtime:
  appKey: # 你的appKey
  serverURLs: # https://你的api
 
+
+# 代码hightlight设置
+
+highlight:
+  enable: false
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: false    # default false
+  custom_css:

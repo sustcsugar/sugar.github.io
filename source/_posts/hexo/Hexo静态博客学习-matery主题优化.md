@@ -65,6 +65,7 @@ code:
 ## 样板
 1. https://small-rose.github.io/
 2. https://marmalade.vip/
+3. https://zahui.fan/
 
 ## ref
 1. [Matery主题新手常见问题](https://small-rose.github.io/posts/a53a9069.html)

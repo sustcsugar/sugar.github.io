@@ -1,24 +1,29 @@
 ---
 title: Hexo静态博客学习-插件安装
-tags: hexo
-abbrlink: 22479
-date: 2024-08-07 23:09:24
+tags:
+  - hexo
 categories: 技术文章
+abbrlink: e989a385
+date: 2024-08-07 23:09:24
 ---
 
 
 ## 常用插件
 
+> 列出所安装的插件
+> 插件的使用和配置在文章后面会逐个说明
+
 ```bash
 npm install hexo-abbrlink --save          # 永久链接,修改文章url格式
 npm install hexo-reading-time --save      # 显示阅读时长
 npm i --save hexo-wordcount               # 文章字数+阅读时长统计
-npm install hexo-generator-search --save
+npm install hexo-generator-search --save  # 文章搜索插件
 
 ```
 
 ## 永久链接配置
 > 在生成的 abbrlink 前面添加时间戳，增加可读性
+> [abbrlink官方](https://github.com/ohroy/hexo-abbrlink)
 ```yml
 # permalink: :year/:month/:day/:title/
 # permalink_defaults:
