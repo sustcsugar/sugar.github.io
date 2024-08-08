@@ -4,4 +4,4 @@ node_modules/
 .deplay_git/
 .deploy_git
 **/.DS_Store
-source/.obsidian/
+.obsidian/
