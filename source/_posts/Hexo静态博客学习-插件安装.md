@@ -46,7 +46,7 @@ postInfo:
 ```
 
 ## 文章搜索功能
-修改很目录的 `_config.yml`
+修改根目录的 `_config.yml`
 
 ```yml
 search:
