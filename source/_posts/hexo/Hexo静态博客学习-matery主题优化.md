@@ -22,17 +22,21 @@ categories: 技术文章
 ## 代码块修改
 
 > `hexo + matery` 自带的代码块渲染后出问题
-> 1. 高亮效果太差了，不好看。
+> 1.  高亮效果太差了，不好看。
 > 2. 格式渲染也有问题。
 ![](https://raw.githubusercontent.com/sustcsugar/picgo/main/img/202408081052616.png)
 
-安装插件： `npm i -S hexo-prism-plugin`
 
-按照下面步骤修改 `config` 文件
+按照下面步骤修改根目录的 `config` 文件
 
 ```yml
 # 根目录的 _config.yml
-syntax_highlighter: highlight.js
+
+# hexo 版本 7.0.0以上时,需要设置 highlighter 选项
+# 这里需要注意,要把 highlighter 修改为 prismjs (注意不是prism.js)
+
+
+syntax_highlighter: prismjs
 highlight:
   enable: false
   line_number: false
@@ -40,11 +44,23 @@ highlight:
   tab_replace: ''
   wrap: true
   hljs: false
+# hexo 官方支持的prism
 prismjs:
   enable: true
   preprocess: true
-  line_number: true
+  line_number: false
   tab_replace: ''
+
+# prism 插件
+# 由于 hexo 官方已经支持了 prism ,所以就不需要安装 prism-plugin 了,如果已经安装了,卸载即可
+# 安装插件 npm i -S hexo-prism-plugin
+# 卸载插件 npm uninstall hexo-prism-plugin
+prism_plugin:
+  enable: false
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: true    # default false
+  custom_css: 
 ```
 
 ```yml
@@ -57,7 +73,7 @@ code:
   break: true  # 代码是否折行
 ```
 
-修改`css`设置：`themes\source\css\matery.css`
+设置完之后发现代码块不显示行号,参考[这篇文章](https://blog.csdn.net/weixin_45453133/article/details/120853394)发现是`matery`对`prism.css`的适配出问题了,需要修改主题中的`prism.css`文件.
 
 
 ## 更换字体
@@ -71,3 +87,4 @@ code:
 1. [Matery主题新手常见问题](https://small-rose.github.io/posts/a53a9069.html)
 2. [Matery之代码块优化](https://cloud.tencent.com/developer/article/2148822)
 3. [matery主题的代码块问题解决](https://www.rewind.show/2020/12/23/BUG%E5%A4%84%E7%90%86/matery%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%97%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/)
+4. [Hexo官方教程-语法高亮](https://hexo.io/zh-cn/docs/syntax-highlight#PrismJS)
