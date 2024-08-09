@@ -1,13 +1,13 @@
 ---
-aliases: 
 tags:
   - hexo
 title: hexo静态博客学习-github-actions自动部署
-date created: 20240808_223136
-date modified: 20240809_002554
-date: 2024-08-09 00:27:06
+date created: 20240808223136
+date modified: 20240809002554
 categories: 文字工作
-abbrlink:
+abbrlink: d2305d95
+date: 2024-08-09 00:27:06
+aliases:
 status:
 ---
 

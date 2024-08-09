@@ -1,6 +1,6 @@
 ---
 title: test_abbrlink
-abbrlink: 
+abbrlink: 21ef72c5
 date: 2024-08-09 10:00:17
 tags:
 categories:

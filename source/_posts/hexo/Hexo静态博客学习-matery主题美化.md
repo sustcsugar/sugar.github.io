@@ -1,10 +1,16 @@
 ---
+aliases:
 title: Hexo静态博客学习-matery主题美化
+author: Sugar
 abbrlink: dfacf917
-date: 2024-08-08 00:36:17
+img: 
 tags:
   - hexo
 categories: 文字工作
+date: 2024-08-08 00:36:17
+date_created: 20240808_003617
+date_modified: 20240809_105321
+status: InProgess
 ---
 
 ## 1. 首页颜色变化
