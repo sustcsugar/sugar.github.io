@@ -2,11 +2,11 @@
 tags:
   - hexo
 title: hexo静态博客学习-github-actions自动部署
-date created: 20240808223136
-date modified: 20240809002554
 categories: 文字工作
 abbrlink: d2305d95
 date: 2024-08-09 00:27:06
+date_created: 20240809_002706
+date_modified: 20240809_002706
 aliases:
 status:
 ---
